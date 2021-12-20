@@ -2,7 +2,7 @@
 ## Summary
 + StandardScaler 이용하여 데이터 전처리  
 + logistic regression 이용하여 olivetti dataset 학습  
-+ GirdSearchCV 이용하여 hyperparameter 최적화  
++ GirdSearch 방식으로 hyperparameter 최적화  
 
 ## Olivetti dataset
 `This dataset contains a set of face images`_ taken between April 1992 and 
@@ -53,7 +53,7 @@ When using these images, please give credit to AT&T Laboratories Cambridge.
 + 적은 iteration에서 모델이 수렴할 수 있도록 scikit-learn에 내장된 StandardScaler을 이용하여 데이터를 scale함.
   
   
-+ Hyperparameter 최적화를 위하여 scikit-learn에 내장된 GirdSearchCV을 사용함.  
++ Hyperparameter 최적화를 위하여 GirdSearch 방식을 사용.  
   + Hyperparameter 최적화는 tol값과 C값에 대하여 수행함.  
   + param_grid에 들어가는 tol값과 C값은 numpy의 linspace를 이용하여 특정 범위 내에서 일정한 간격을 두고 생성하였으며, 범위를 좁혀가며 최적화를 수행함. 
   + tol은 iteration마다 목표로 하는 손실함수의 감소치를 나타내는 parameter로, 손실 함수의 값이 이 값만큼 감소되지 않으면 iteration을 중단함.  
